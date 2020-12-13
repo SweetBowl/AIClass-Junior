@@ -129,6 +129,7 @@ print(linearMdl.coef_)
 print("截距")
 print(linearMdl.intercept_)
 print("方差")
+#通过决定系数来来判断回归方程的拟合程度(分数越高说明拟合的程度越好)？
 print(linearMdl.score(diabetes_x_test3,diabetes_y_test3))
 
 #绘图
@@ -144,3 +145,5 @@ for idx, n in enumerate(diabetes_x_test3):
     plt.plot([n,n],[diabetes_y_test3[idx],predict[idx]],'r-')
 
 plt.show()
+
+#可视化可参考这个：https://zhuanlan.zhihu.com/p/141326006
