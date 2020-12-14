@@ -87,7 +87,7 @@ print(data_x)
 #print(data_target)
 
 
-# 训练样本前432个，测试样本最后10个
+# 训练样本前432个，测试样本最后20个
 # 处理成二维数组
 diabetes_x_train1 = data_x.iloc[:-20]    # 训练样本
 diabetes_x_train2=np.array(diabetes_x_train1)

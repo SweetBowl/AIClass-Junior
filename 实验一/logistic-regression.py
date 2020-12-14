@@ -71,6 +71,7 @@ cm_dark = ['r','b','g']
 
 plt.pcolormesh(x1,y1,y_hat,cmap=cm_light)   #根据y_hat的值分类
 
+# 将数据集中的点显示在分类好的平面上
 plt.scatter(data_x[data_y ==0, 0],data_x[data_y ==0, 1],alpha=0.8, s=50,edgecolors='red',
              c=cm_dark[0], marker=marker_list[0], label=label_list[0])
 plt.scatter(data_x[data_y ==1, 0],data_x[data_y ==1, 1],alpha=0.8, s=50,edgecolors='k',

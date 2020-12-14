@@ -16,3 +16,26 @@
 数据集: iris (安德森鸢尾花卉数据集)。
 
 实验过程：利用单个feature或者多个feature实现二元或者多元逻辑斯蒂回归。
+
+## 实验二
+
+#### 一、线性支持向量机（硬间隔支持向量机——Hard Margin SVM， 软间隔支持向量机——Soft Margin SVM）
+
+1、生成数据集。使用 sklearn.datasets.make_blobs 函数为聚类任务生成数据集，输出数据集和相应的标签。
+特征数设置为 2 (n_features)，标签数设置为 2 (centers);
+划分数据集，80%为训练集、其余为测试集。
+2、数据可视化
+以第一个样本特征为 x 轴，第二个样本特征为 y 轴，绘制散点图。(根据标签着色)
+3、搭建模型。svm.LinearSVC。
+4、train and test。训练集注入模型，随后将训练好的模型用于测试集预测。
+测试结果衡量指标(metrics)：accuacy。
+5、分析讨论。调整模型参数 C，对不同结果进行分析。
+
+#### 二、基于核方法的 SVM ( rbf kernel, etc.) 当数据线性不可分时，采用各种kernel tricks
+1、数据集：iris。
+特征采用,数据集前两个特征值;
+划分数据集，前 130 为训练集，其余为测试集。
+2、搭建模型。svm.SVC ( kernel = ‘ rbf ’ )，选择核函数。
+3、train and test。训练集注入模型，随后将训练好的模型用于测试集预测
+测试结果衡量指标(metrics)：accuacy，precision and recall。
+4、可视化。绘制支持向量机分类边界。
