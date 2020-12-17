@@ -39,3 +39,16 @@
 3、train and test。训练集注入模型，随后将训练好的模型用于测试集预测
 测试结果衡量指标(metrics)：accuacy，precision and recall。
 4、可视化。绘制支持向量机分类边界。
+
+## 实验三
+
+#### 无监督聚类算法：dbscan 与 k-means
+
+1、加载数据集，Data_for_Cluster.npz ；
+X 为特征，labels_true 为标签。
+2、搭建模型，k-means 与 dbscan。
+3、训练模型，调参，得出分类结果。
+4、结果分析及可视化。
+    绘制散点图。(根据分类结果进行着色) ；
+    从算法原理的角度分析两个算法优缺点，及适应的数据集特征。
+5、评估标准，轮廓系数法（Silhouette Cofficient），用来评估聚类算法的效果。
