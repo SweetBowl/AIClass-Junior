@@ -52,3 +52,13 @@ X 为特征，labels_true 为标签。
     绘制散点图。(根据分类结果进行着色) ；
     从算法原理的角度分析两个算法优缺点，及适应的数据集特征。
 5、评估标准，轮廓系数法（Silhouette Cofficient），用来评估聚类算法的效果。
+
+## 实验四
+
+#### 手写数字识别——CNN 的应用
+1、加载数据集
+(x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
+2、搭建 CNN 模型
+优化器（optimizer）：adam
+评估指标（metrics）：accuacy
+3、训练好模型后，将其用于测试
