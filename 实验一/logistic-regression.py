@@ -44,7 +44,7 @@ target_list = ['setosa','versicolor','virginica']
 print(metrics.classification_report(y_test,y_hat,target_names=target_list))
 
 
-#可视化分类结果，画出决策边界
+# 可视化分类结果，画出决策边界
 # 确定坐标范围，x,y轴各表示一个特征
 # 从最大值到最小值构建一系列的数据，使得它能覆盖整个的特征数据范围，然后预测这些值所属的分类，并给它们所在的区域
 N, M = 500, 500 # 横纵各采样多少值

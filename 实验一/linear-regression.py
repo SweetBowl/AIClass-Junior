@@ -83,7 +83,7 @@ data_x_mean = np.mean(predata_x)
 data_x_std = np.std(predata_x)
 # Normalization
 data_x = (predata_x-data_x_mean) / data_x_std
-print(data_x)
+# print(data_x)
 #print(data_target)
 
 
@@ -115,10 +115,10 @@ linearMdl = linear_model.LinearRegression()
 linearMdl.fit(diabetes_x_train3,diabetes_y_train3)
 
 predict = linearMdl.predict(diabetes_x_test3)
-#print("预测结果")
-#print(predict)
-#print("真实结果")
-#print(diabetes_y_test3)
+print("预测结果")
+print(predict)
+print("真实结果")
+print(diabetes_y_test3)
 
 #评价结果
 cost = np.mean(diabetes_y_test3 - predict)**2
@@ -128,8 +128,8 @@ print("系数")
 print(linearMdl.coef_)
 print("截距")
 print(linearMdl.intercept_)
-print("方差")
 #通过决定系数来来判断回归方程的拟合程度(分数越高说明拟合的程度越好)？
+print("决定系数")
 print(linearMdl.score(diabetes_x_test3,diabetes_y_test3))
 
 #绘图
