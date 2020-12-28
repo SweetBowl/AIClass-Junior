@@ -254,8 +254,6 @@ y:糖尿病预测值
 
 **实验过程:**加载数据集，划分数据集-train -test,搭建model用于训练，得出预测结果。
 
-
-
 #### 2.逻辑斯蒂回归: Logistic regression
 
 **使用sklearn进行逻辑斯蒂回归**
@@ -619,8 +617,6 @@ avg / total       0.90      0.89      0.89        45
 ![\theta_j :={1\over m} \alpha(h_\theta(x^{(i)})-y^{(i)}) x^{(i)}_j](https://private.codecogs.com/gif.latex?%5Ctheta_j%20%3A%3D%7B1%5Cover%20m%7D%20%5Calpha%28h_%5Ctheta%28x%5E%7B%28i%29%7D%29-y%5E%7B%28i%29%7D%29%20x%5E%7B%28i%29%7D_j)
 
 唯一不同的是假设函数![h_\theta(x^{(i)})](https://private.codecogs.com/gif.latex?h_%5Ctheta%28x%5E%7B%28i%29%7D%29)，![y\in \{0,1\}](https://private.codecogs.com/gif.latex?y%5Cin%20%5C%7B0%2C1%5C%7D)，对于LR而言，![h_\theta(x^{(i)})\in [0,1]](https://private.codecogs.com/gif.latex?h_%5Ctheta%28x%5E%7B%28i%29%7D%29%5Cin%20%5B0%2C1%5D)，那么梯度更新的幅度就不会太大。而线性回归![h_\theta(x^{(i)})](https://private.codecogs.com/gif.latex?h_%5Ctheta%28x%5E%7B%28i%29%7D%29)在整个实数域上，即使已经分类正确的点，在梯度更新的过程中也会大大影响到其它数据的分类，就比如有一个正样本，其输出为10000，此时梯度更新的时候，这个样本就会大大影响负样本的分类。而对于LR而言，这种非常肯定的正样本并不会影响负样本的分类情况。
-
-
 
 ## 七、对本实验过程及方法、手段的改进建议
 
