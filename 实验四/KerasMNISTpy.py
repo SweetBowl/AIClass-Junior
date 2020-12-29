@@ -29,7 +29,7 @@ model.add(tf.keras.layers.Dense(10,activation=tf.nn.softmax))
 
 model.compile(optimizer='adam',loss='sparse_categorical_crossentropy',metrics=['accuracy'])
 
-history = model.fit(x_train,y_train,epochs=5)
+history = model.fit(x_train,y_train,epochs=25)
 
 #%%
 print(history.history.keys())
@@ -37,7 +37,7 @@ print(history.history.keys())
 plt.plot(history.history['acc'])
 # xtick = range(1,6,1)
 # plt.plot(history.history['val_acc'])
-plt.title('model accuracy')
+plt.title('model accuracy on train')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
 # plt.xticks(x,('1','2','3','4','5'))
@@ -46,27 +46,31 @@ plt.show()
 
 #%%
 plt.plot(history.history['loss'])
-plt.title('model loss')
+plt.title('model loss on train')
 plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['train'],loc='upper left')
 plt.show()
 
 #%%
-score = model.evaluate(x_test, y_test, verbose=0)
-print('Test loss: ',score[0])
+# score = model.evaluate(x_test, y_test, verbose=0)
+# print('Test loss: ',score[0])
 
 #%%
+train_loss, train_acc = model.evaluate(x_train,y_train)
+print("训练集loss: %.4f" % train_loss)
+print("训练集准确率: %.4f" % train_acc)
+
 # 测试模型
 val_loss, val_acc = model.evaluate(x_test,y_test)
-print(val_loss)
-print(val_acc)
+print("测试集loss: %.4f" % val_loss)
+print("测试集准确率: %.4f" % val_acc)
 
 #%%
 # 识别训练集
 predictions = model.predict(x_test)
-print(predictions)
-print(np.argmax(predictions[0]))
+# print(predictions)
+print("预测结果: {}".format(np.argmax(predictions[0])))
 
 #%%
 plt.imshow(x_test[0],cmap='gray')
